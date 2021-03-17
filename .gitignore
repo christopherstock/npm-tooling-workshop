@@ -1,0 +1,19 @@
+
+# Node.js
+node_modules
+
+# macOS
+.DS_Store
+
+# IntelliJ
+.idea
+*.iml
+
+# TypeScript build path
+bin
+
+# TypeDoc output
+doc
+
+# Jest coverage output
+coverage
