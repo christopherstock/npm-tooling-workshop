@@ -4,7 +4,7 @@ console.log("src/index.ts being invoked!")
 
 window.onload = () => {
 
-    // generate and add HTML rendering Canvas
+    // create and add HTML rendering Canvas
     const canvas = document.createElement("canvas");
     canvas.style.width = '100%';
     canvas.style.outline = 'none';
@@ -12,7 +12,7 @@ window.onload = () => {
     document.body.style.background = '#000000';
     document.body.style.margin = '0';
 
-    // generate BABYLON engine
+    // create BABYLON engine
     const engine = new BABYLON.Engine(canvas, true);
 
     // create BABYLON scene
