@@ -1,6 +1,6 @@
 import * as BABYLON from 'babylonjs';
 
-console.log( "src/index.ts being invoked!" )
+console.log("src/index.ts being invoked!")
 
 window.onload = () => {
 
@@ -25,26 +25,26 @@ window.onload = () => {
     const pointLightA = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 0, 2), scene);
     pointLightA.intensity = 2.0;
     pointLightA.range     = 2.0;
-    pointLightA.diffuse   = new BABYLON.Color3( 1.0, 1.0, 1.0 );
-    pointLightA.specular  = new BABYLON.Color3( 1.0, 1.0, 1.0 );
+    pointLightA.diffuse   = new BABYLON.Color3(1.0, 1.0, 1.0);
+    pointLightA.specular  = new BABYLON.Color3(1.0, 1.0, 1.0);
     const pointLightB = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 0, -2), scene);
     pointLightB.intensity = 2.0;
     pointLightB.range     = 2.0;
-    pointLightB.diffuse   = new BABYLON.Color3( 1.0, 0.0, 1.0 );
-    pointLightB.specular  = new BABYLON.Color3( 1.0, 1.0, 1.0 );
-    const materialBox = new BABYLON.StandardMaterial('material', scene );
-    materialBox.emissiveColor = new BABYLON.Color3( 0.89, 0.32, 0.01 );
-    materialBox.specularColor = new BABYLON.Color3( 1.0, 1.0, 1.0 );
+    pointLightB.diffuse   = new BABYLON.Color3(1.0, 0.0, 1.0);
+    pointLightB.specular  = new BABYLON.Color3(1.0, 1.0, 1.0);
+    const materialBox = new BABYLON.StandardMaterial('material', scene);
+    materialBox.emissiveColor = new BABYLON.Color3(0.89, 0.32, 0.01);
+    materialBox.specularColor = new BABYLON.Color3(1.0, 1.0, 1.0);
     const box = BABYLON.MeshBuilder.CreateBox("box", {});
     box.material = materialBox;
-    const materialSphere = new BABYLON.StandardMaterial('material', scene );
-    materialSphere.emissiveColor = new BABYLON.Color3( 0.53, 0.53, 0.53 );
+    const materialSphere = new BABYLON.StandardMaterial('material', scene);
+    materialSphere.emissiveColor = new BABYLON.Color3(0.53, 0.53, 0.53);
     const sphereA = BABYLON.MeshBuilder.CreateSphere("box", {diameter: 0.4,});
     sphereA.material = materialSphere;
-    sphereA.position = new BABYLON.Vector3( 0.0, 0.0, 1.0 );
+    sphereA.position = new BABYLON.Vector3(0.0, 0.0, 1.0);
     const sphereB = BABYLON.MeshBuilder.CreateSphere("box", {diameter: 0.4,});
     sphereB.material = materialSphere;
-    sphereB.position = new BABYLON.Vector3( 0.0, 0.0, -1.0 );
+    sphereB.position = new BABYLON.Vector3(0.0, 0.0, -1.0);
 
     // register render loop that repeatedly renders the scene
     engine.runRenderLoop(() => {
