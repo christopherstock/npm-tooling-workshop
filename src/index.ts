@@ -1,4 +1,1 @@
-console.log( "src/index.ts being invoked" )
-
-class Test {
-}
+console.log( "src/index.ts being invoked!" )
