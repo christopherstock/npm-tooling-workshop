@@ -18,14 +18,14 @@ window.onload = () => {
     // create BABYLON scene
     const scene = new BABYLON.Scene(engine);
     scene.clearColor = new BABYLON.Color4(0.0, 0.0, 0.0, 1.0);
-    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 0.77, Math.PI / 2.5, 3, new BABYLON.Vector3(0, 0, 0), scene);
+    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 0.5, Math.PI / 2.5, 3, new BABYLON.Vector3(0, 0, 0), scene);
     camera.attachControl(canvas, true);
     const hemisphericLight = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 0, 0), scene);
     hemisphericLight.intensity = 0.1;
     const pointLightA = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 0, 2), scene);
     pointLightA.intensity = 2.0;
     pointLightA.range     = 2.0;
-    pointLightA.diffuse   = new BABYLON.Color3(1.0, 1.0, 1.0);
+    pointLightA.diffuse   = new BABYLON.Color3(1.0, 1.0, 0.0);
     pointLightA.specular  = new BABYLON.Color3(1.0, 1.0, 1.0);
     const pointLightB = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 0, -2), scene);
     pointLightB.intensity = 2.0;
