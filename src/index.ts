@@ -20,6 +20,8 @@ window.onload = () => {
     scene.clearColor = new BABYLON.Color4(0.0, 0.0, 0.0, 1.0);
     const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 0.5, Math.PI / 2.5, 3, new BABYLON.Vector3(0, 0, 0), scene);
     camera.attachControl(canvas, true);
+    camera.upperRadiusLimit = 3.0;
+    camera.lowerRadiusLimit = 3.0;
     const hemisphericLight = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 0, 0), scene);
     hemisphericLight.intensity = 0.1;
     const pointLightA = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 0, 2), scene);
